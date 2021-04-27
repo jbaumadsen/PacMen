@@ -15,6 +15,7 @@ This page makes pacmen and they bounce around the screen
 3. Click on the drop down in the source section and select main.
 4. Click save
 
+To clone a local copy of the repository, follow the instructions in [Cloning a repository] (https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository).
 
 ## Development
 Future development would include:
