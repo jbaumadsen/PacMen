@@ -30,10 +30,29 @@ function makePac() {
   return { position, velocity, newimg, }; 
 } 
 function changeImage(item){
-  if (item.velocity > 0){ 
+  if (item.velocity >= 0){ 
     if (item.counter = 5){
-      item.src = pacArray[0][0];
+      item.newimg.src = pacArray[0][0];
+      // game.appendChild(item)
     }
+    if(item.counter = 10){
+      item.newimg.src = pacArray[0][1];
+      // game.appendChild(item)
+      item.counter = 0;
+    }
+  }else{
+    if (item.counter = 5){
+      item.src = pacArray[1][0];
+      // item.setAttribute("src", pacArray[1][0]);
+      // game.appendChild(item)
+
+    }
+    if(item.counter = 10){
+      // item.setAttribute("src",pacArray[1][1]);
+      // game.appendChild(item)
+      item.counter = 0;
+    }
+
   }
 }
 function update() { 
@@ -45,6 +64,7 @@ function update() {
     item.position.y += item.velocity.y; 
     item.newimg.style.left = item.position.x; 
     item.newimg.style.top = item.position.y; 
+    item.counter++;
     
   }); 
   setTimeout(update, 20); 
